@@ -1,3 +1,5 @@
+## [**Before the storm**](https://github.com/WintermuteResearch/Alpha-Challenge-2025/tree/main/04-before-the-storm)
+
 ### 题目
 
 几天前，UwU Lend 被盗取了 2000 万美元，你发现漏洞利用者（https://etherscan.io/address/0x6F8C5692b00c2eBbd07e4FD80E332DfF3ab8E83c）的 Llamalend 仓位变得不健康，所以是时候清算了。你目前没有资金，所以唯一的办法就是使用闪电贷。
@@ -148,7 +150,39 @@ Curve crvUSD/USDT Pool: ✅
     );
 ```
 
-后续就是部署具体的清算合约，然后多次清算，每次清算一小部分
+后续就是部署具体的清算合约，然后多次清算，每次清算一小部分。
+
+【以下是正确代码，截取部分】既可以合约多次清算，也可以用脚本多次调用，异曲同工。
+
+```solidity
+// Execute liquidation
+            try liquidator.liquidate(LIQUIDATION_FRACTION) {
+                uint256 balanceAfter = IERC20(CRV).balanceOf(deployer);
+                uint256 profit = balanceAfter - balanceBefore;
+                successfulLiquidations++;
+                
+                console2.log("Liquidation SUCCESS!");
+                console2.log("Profit this round:", profit / 1e18, "CRV");
+                console2.log("Current total CRV:", balanceAfter / 1e18);
+                
+                // Check if we have enough CRV
+                if (balanceAfter >= TARGET_CRV_AMOUNT) {
+                    console2.log("");
+                    console2.log("SUCCESS! Reached target of", TARGET_CRV_AMOUNT / 1e18, "CRV");
+                    console2.log("Total liquidations performed:", successfulLiquidations);
+                    break;
+                }
+                console2.log("Still need:", (TARGET_CRV_AMOUNT - balanceAfter) / 1e18, "more CRV");
+                console2.log("");
+                
+            } catch Error(string memory reason) {
+                console2.log("Liquidation FAILED:", reason);
+                break;
+            } catch {
+                console2.log("Liquidation FAILED: Unknown error");
+                break;
+            }
+```
 
 ### 总体思路
 
