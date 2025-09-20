@@ -14,7 +14,7 @@ https://x.com/vanisaxxm/status/1958396749485400213 关于闪电的科普视频�
 
 ### 第一次尝试的思路
 
-首先通过题目中给的地址（0x6F8C5692b00c2eBbd07e4FD80E332DfF3ab8E83c），通过链接进去会发现这个其实不是攻击者的地址，而是一个合约地址，但是基于这个合约地址就可以知道攻击者的地址（https://etherscan.io/address/0x841ddf093f5188989fa1524e7b893de64b421f47），这个合约实际是攻击者的借贷仓位。
+首先通过题目中给的地址（0x6F8C5692b00c2eBbd07e4FD80E332DfF3ab8E83c），通过链接进去会发现这个其实不是攻击者的地址，而是一个合约地址，但是基于这个合约地址就可以知道攻击者的地址（ https://etherscan.io/address/0x841ddf093f5188989fa1524e7b893de64b421f47 ），这个合约实际是攻击者的借贷仓位。
 
 ```solidity
 markets: 14 Controller[3]=0xEdA215b7666936DEd834f76f3fBC6F323295110A coll=0xD533a949740bb3306d119CC777fa900bA034cd52 borr=0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E borrower debt = 8127727396534152807708083 >> TARGET CONTROLLER = 0xEdA215b7666936DEd834f76f3fBC6F323295110A
@@ -140,7 +140,7 @@ Curve crvUSD/USDT Pool: ✅
 
 （2）在比赛时，反复尝试清算都失败了，经过赛后查看https://github.com/Frodan/wintermute-alpha-2025-writeups/blob/main/Before%20The%20Storm/Writeup.md 的解答，发现正确的方式是分批清算。
 
-**这个是UwU lend只允许清算一小部分。这一点没能意识到和解决的主要原因在于我没能很好的查阅借贷协议提供的文档（**https://github.com/UwU-Lend/uwu-contracts/blob/main/aave-protocol-v2/protocol/lendingpool/LendingPoolCollateralManager.sol**）。**
+**这个是UwU lend只允许清算一小部分。这一点没能意识到和解决的主要原因在于我没能很好的查阅借贷协议提供的文档（** https://github.com/UwU-Lend/uwu-contracts/blob/main/aave-protocol-v2/protocol/lendingpool/LendingPoolCollateralManager.sol **）。**
 
 ```solidity
  uint256 internal constant LIQUIDATION_CLOSE_FACTOR_PERCENT = 5000;
