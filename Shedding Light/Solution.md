@@ -78,7 +78,7 @@ SolFi: 7993236220.675474
 
 ZeroFi: 5308862873.601681
 
-在比赛结束后，我复盘时，我找到了jupiter的dune面板，其中具有比较全的信息 https://dune.com/jupiterexchange/jupiter-aggregator-solana ，以及面板中有关于 https://dune.com/queries/3099670/5172147 ，在这两个的基础上，我们可以就可以写出所有amm在2025年7月份的sol-usdc成交量 https://dune.com/queries/5754707/9337192/。
+在比赛结束后，我复盘时，我找到了jupiter的dune面板，其中具有比较全的信息 https://dune.com/jupiterexchange/jupiter-aggregator-solana ，以及面板中有关于 https://dune.com/queries/3099670/5172147 ，在这两个的基础上，我们可以就可以写出所有amm在2025年7月份的sol-usdc成交量 https://dune.com/queries/5754707/9337192/ 。
 
 ```solidity
 -- SOL–USDC 各 AMM 在 2025-07 的成交量（降序）
@@ -275,7 +275,7 @@ $p_i$、数量$q_i$（以基础资产计），方向$\text{side}_i \in \{+1,-1\}
 
 即 收入下限 = PNL = 0，我们可以利用第二问中所列出的PnL公式，将其置为0后进行推导。
 
-首先查询一下SolFi相关的数据面板https://dune.com/web3precious/solfi，然后查询一下前8个月的。
+首先查询一下SolFi相关的数据面板 https://dune.com/web3precious/solfi ，然后查询一下前8个月的。
 
 ```sql
 SELECT
@@ -293,7 +293,7 @@ ORDER BY
 
 就以第二问中的第一种方法去估算，
 
-- 成交量 (V): 从 Dune Analytics 或链上数据查询获取（https://solscan.io/account/SoLFiHG9TfgtdUXUjWAxi3LtvYuFyDLVhBWxdMZxyCe、https://solscan.io/account/SV2EYYJyRz2YhfXwXnhNAevDEui5Q6yrfyo13WtupPF）。
+- 成交量 (V): 从 Dune Analytics 或链上数据查询获取（https://solscan.io/account/SoLFiHG9TfgtdUXUjWAxi3LtvYuFyDLVhBWxdMZxyCe 、 https://solscan.io/account/SV2EYYJyRz2YhfXwXnhNAevDEui5Q6yrfyo13WtupPF）。
 - 费用率 (f): AMM 收取的交易费用率，根据查询链上数据SolFI收取 0.1%。
 - 波动率 (σ): 资产年化波动率（如 SOL 或 ETH 的历史/预期值）
 - 流动性池规模 (L): AMM 池中锁定的总流动性价值
