@@ -108,7 +108,11 @@ https://defillama.com/dexs/chain/eclipse
 https://www.coingecko.com/en/exchanges/orca-eclipse
 
 现货 DEX 交易（Invariant, Orca 等）:
-DeFiLlama 显示 Eclipse 近 30 天 DEX 成交约 **$51.8m**；CoinGecko 列出 Orca(Eclipse) 活跃交易对（如 USDC/ETH）；Invariant 在 6-9 累计量已破 **$500m**（为总量概念，可佐证 7 月具备活跃交易基础）。
+DeFiLlama 显示 Eclipse 近 30 天 DEX 成交约 **$51.8m**；
+CoinGecko 列出 Orca(Eclipse) 活跃交易对（如 USDC/ETH）；
+
+Invariant 在 6-9 累计量已破 **$500m**（为总量概念，可佐证 7 月具备活跃交易基础）。
+
 主要集中在USDC/ETH（占比70.68%）、SOL/ETH、SOL/ETH交易对，7 月成交主要集中在蓝筹对（USDC/ETH），价差/滑点正常，属健康活跃。
 
 https://coingape.com/trending/eclipse-airdrop-live-how-to-claim-es-tokens-before-august-15/
@@ -120,7 +124,7 @@ https://www.eclipse.xyz/articles/everything-eclipse-ed-12
 AllDomains .turbo 域名铸造/续费（身份类交互）：单笔金额小、笔数多；对“活跃地址/交互次数”有贡献，但直接经济价值有限。疑似“任务型”短期冲量。认为短期红旗。
 
 Turbo Tap 游戏内交互（点按/Boost 任务）：
-官方文章与媒体报道确认 Turbo Tap 为压力测试/积分玩法，grass 积分**不**与代币 1:1 对应；7 月空投叙事中被纳入参与度参考。对 TPS/交易笔数“极友好”但经济含金量低
+官方文章与媒体报道确认 Turbo Tap 为压力测试/积分玩法，grass 积分不与代币 1:1 对应；7 月空投叙事中被纳入参与度参考。对 TPS/交易笔数“极友好”但经济含金量低
 
 Eclipse L2's July 2025 activity showed moderate growth with TVL reaching $14.27m (per DeFiLlama) and total tx volume ~5.2 million (estimated from Dune dashboards like angry/eclipse-mainnet-dashboard-and-wallet-rank). However, sources highlight mixed sustainability. Top-5 activity sources (ranked by tx contribution/volume from Dune/L2BEAT data, e.g., bridge ~35% of inflows, DEX ~25% of tx):
 
