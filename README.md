@@ -4,9 +4,9 @@
 
 十分感谢 https://x.com/FrankResearcher 的指导意见以及鼓励。
 
-感谢https://0xdhruv.me/posts/wintermute-alpha-challenge-25/提供解题心得。
+感谢 https://0xdhruv.me/posts/wintermute-alpha-challenge-25/ 提供解题心得。
 
-感谢https://github.com/Frodan/wintermute-alpha-2025-writeups提供的解答。
+感谢 https://github.com/Frodan/wintermute-alpha-2025-writeups 提供的解答。
 
 ## Notion 版本
 

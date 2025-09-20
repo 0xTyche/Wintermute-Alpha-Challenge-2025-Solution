@@ -21,7 +21,8 @@
 
 ### 解题思路：
 
-首先要清楚的了解dark amm是什么东西，所以我首先在推特上搜索了相关内容，这是一篇比较具体能否比较好的了解的科普文章（https://x.com/ec_unoxx/status/1957005022178447452）。
+首先要清楚的了解dark amm是什么东西，所以我首先在推特上搜索了相关内容，这是一篇比较具体能否比较好的了解的科普文章
+（ https://x.com/ec_unoxx/status/1957005022178447452 ）。
 
 在该科普文章中有这么一句话，（简单来说，暗池这个东西对于寻找alpha来说，具有极大的价值）
 
@@ -77,7 +78,7 @@ SolFi: 7993236220.675474
 
 ZeroFi: 5308862873.601681
 
-在比赛结束后，我复盘时，我找到了jupiter的dune面板，其中具有比较全的信息https://dune.com/jupiterexchange/jupiter-aggregator-solana，以及面板中有关于https://dune.com/queries/3099670/5172147，在这两个的基础上，我们可以就可以写出所有amm在2025年7月份的sol-usdc成交量https://dune.com/queries/5754707/9337192/。
+在比赛结束后，我复盘时，我找到了jupiter的dune面板，其中具有比较全的信息 https://dune.com/jupiterexchange/jupiter-aggregator-solana ，以及面板中有关于 https://dune.com/queries/3099670/5172147 ，在这两个的基础上，我们可以就可以写出所有amm在2025年7月份的sol-usdc成交量 https://dune.com/queries/5754707/9337192/。
 
 ```solidity
 -- SOL–USDC 各 AMM 在 2025-07 的成交量（降序）
@@ -121,13 +122,13 @@ ORDER BY volume_july_2025 DESC;
 
 经过查询发现，HumidiFi是于2025年6月份推出的，所以可能是jupiter还为对其数据进行收集或者对program进行标记。
 
-这个是Humidifi sol-usdc 交易对在2025年7月份的成交量 https://dune.com/queries/5755513/9338460/，查询后发现为0，jupiter_solana 确实没有Humidifi的数据。
+这个是Humidifi sol-usdc 交易对在2025年7月份的成交量 https://dune.com/queries/5755513/9338460/ ，查询后发现为0，jupiter_solana 确实没有Humidifi的数据。
 
 https://solanafloor.com/zh/news/how-humidifi-became-a-top-solana-dex-by-volume-in-under-three-months
 
 但是查询发现已经有不少的交易量了，所以必须得考虑 HumidiFi。
 
-首先换个方式查询一下池子，就不从jupiter去查询，而是通过program/已有humidifi的数据，去查询其在7月份的成交量。我尝试使用program的地址去查询，结果发现查询给我的提示都是超时，所以我不得已去寻找dune上已有的humidifi数据https://dune.com/stepanalytics_team/humidifi-stats[s](https://dune.com/stepanalytics_team/humidifi-stats)。
+首先换个方式查询一下池子，就不从jupiter去查询，而是通过program/已有humidifi的数据，去查询其在7月份的成交量。我尝试使用program的地址去查询，结果发现查询给我的提示都是超时，所以我不得已去寻找dune上已有的humidifi数据 (https://dune.com/stepanalytics_team/humidifi-stats)。
 
 https://dune.com/queries/5758576/9343024/ 可以发现sol-usdc还是成交量为0，那么是不是humidifi上的sol和usdc的兑换是通过 wsol-usdc 池子进行的呢？所以我找到了humidifi 四个wsol-usdc的池子，然后查询这四个池子在2025年7月份的总成交量。
 
@@ -172,7 +173,7 @@ WITH target_pools AS (
 
 ### 补充
 
-frodan 完成了对答案的更新，也说明了也确实没在dune寻找到humidifi的数据，他在学习该https://dune.com/queries/5683337查询的基础上，添加了限制条件，完成了对humidifi的查询。
+frodan 完成了对答案的更新，也说明了也确实没在dune寻找到humidifi的数据，他在学习该 https://dune.com/queries/5683337 查询的基础上，添加了限制条件，完成了对humidifi的查询。
 
 ```sql
 SELECT
@@ -216,7 +217,7 @@ ORDER BY total_volume_usd DESC
 
 ### 第二个问题
 
-（1）第一种方法，参考自一篇论文，其讲述的是被动流动性供应的盈亏（PnL）*与市场条件（例如交易费、价格波动性和交易量）之间的关系。*https://arxiv.org/html/2508.08152v1，如果参考cex的方法来估算cex的话，
+（1）第一种方法，参考自一篇论文，其讲述的是被动流动性供应的盈亏（PnL）*与市场条件（例如交易费、价格波动性和交易量）之间的关系。https://arxiv.org/html/2508.08152v1 ，如果参考cex的方法来估算cex的话，
 
 首先，论文将LP 绩效是分为两个部分，一个是未对冲的PnL，另一个是已对冲的PnL。
 
