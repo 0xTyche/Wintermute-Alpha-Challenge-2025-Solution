@@ -15,7 +15,7 @@
 
 ### 题解
 
-本篇题解主要学习https://github.com/Frodan/wintermute-alpha-2025-writeups/blob/main/Rabbithole/Writeup.md以及添加自己学习过程中的理解和补充知识。
+本篇题解主要学习 https://github.com/Frodan/wintermute-alpha-2025-writeups/blob/main/Rabbithole/Writeup.md 以及添加自己学习过程中的理解和补充知识。
 
 排查思路（黑客活动要点）
 
@@ -60,7 +60,7 @@ https://etherscan.io/tx/0x8c82ba8010687de3ee501195a33795868fec2995eedbc082171fb7
 
 ![image.png](attachment:4936e981-22a7-4bf6-b386-c0d8b39bd155:image.png)
 
-可能很多人查看攻击者地址2会感觉到很奇怪没有看到直接转入混币器的交易，攻击者是先把资金再转移到该地址https://etherscan.io/address/0xc772BdB4588414D8401aB90aA9DA084eB52E7475，然后将资金拆分成每一笔100ETH，转入了混币器。
+可能很多人查看攻击者地址2会感觉到很奇怪没有看到直接转入混币器的交易，攻击者是先把资金再转移到该地址https://etherscan.io/address/0xc772BdB4588414D8401aB90aA9DA084eB52E7475 ，然后将资金拆分成每一笔100ETH，转入了混币器。
 
 ![image.png](attachment:ff28c2fb-57c8-41d3-946d-34d1f17be113:image.png)
 
@@ -88,7 +88,7 @@ Tornado 本身长期处在制裁与高监控之下，直接大额走混币器很
 
 因为一般攻击合约是不会写明具体的攻击对象的，而是会在调用的时候将攻击目标的合约地址作为参数传入部署的攻击合约从而进行攻击。
 
-我们其实可以发现2025年7月28日 创建（[0xfdd41e68ac5d07a6c95715a75d84f3418abcace9059430ed1832fade00e227f9](https://etherscan.io/tx/0xfdd41e68ac5d07a6c95715a75d84f3418abcace9059430ed1832fade00e227f9)）的合约，发现实际在28号当日就调用了一次https://etherscan.io/tx/0x845d8c3dc6427629306c7f8bfe0f7c0531d1c8729a6449232b7e8b6f8ba9a846，显然也是一次攻击。
+我们其实可以发现2025年7月28日 创建（[0xfdd41e68ac5d07a6c95715a75d84f3418abcace9059430ed1832fade00e227f9](https://etherscan.io/tx/0xfdd41e68ac5d07a6c95715a75d84f3418abcace9059430ed1832fade00e227f9)）的合约，发现实际在28号当日就调用了一次 https://etherscan.io/tx/0x845d8c3dc6427629306c7f8bfe0f7c0531d1c8729a6449232b7e8b6f8ba9a846 ，显然也是一次攻击。
 
 那么我们不妨搜索一下他攻击的是什么？[0xE0E907e3743715294c2A5f52618d278CBc006CEd](https://x.com/search?q=0xE0E907e3743715294c2A5f52618d278CBc006CEd&src=typeahead_click)
 
