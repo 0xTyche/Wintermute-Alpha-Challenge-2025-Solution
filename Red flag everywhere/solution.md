@@ -72,7 +72,7 @@ These suggest missing or incomplete postings, potentially due to configuration i
 
 blob是用于存储数据的，如果blob的发布，存在时间不连续，或者是异常间隔等情况，则是说明L2出现了问题，那么这么多数据我们需要对其进行可视化后，才能更为直观的分析其是否存在异常。
 
-![gaps_over_time.png](attachment:089215fa-c7bc-476d-8aee-635b69d70f13:gaps_over_time.png)
+![gaps_over_time.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Red%20flag%20everywhere/pic/gaps_over_time.png?raw=true)
 
 这张图是在看**相邻两次 Celestia blob 发布之间的时间间隔，**会出现两个blob间隔时间越来越长的情况，就说明没有新的blob发布，导致举例前一个blob的时间间隔变长。
 
