@@ -58,11 +58,12 @@ https://etherscan.io/tx/0x8c82ba8010687de3ee501195a33795868fec2995eedbc082171fb7
 
 截至2025年9月15日，攻击者的钱包中仍有6180个WETH，是攻击者落网了还是由于什么原因导致剩下的WETH没有处理，或者转出。
 
-![image.png](attachment:4936e981-22a7-4bf6-b386-c0d8b39bd155:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/exploiter'%20eth%20posittion.png?raw=true)
+
 
 可能很多人查看攻击者地址2会感觉到很奇怪没有看到直接转入混币器的交易，攻击者是先把资金再转移到该地址https://etherscan.io/address/0xc772BdB4588414D8401aB90aA9DA084eB52E7475 ，然后将资金拆分成每一笔100ETH，转入了混币器。
 
-![image.png](attachment:ff28c2fb-57c8-41d3-946d-34d1f17be113:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/transer%20to%20tomado1.png?raw=true)
 
 攻击者2先转出一笔1ETH（0xebf4f4eedd4aca5cfe3fc370aa47b06a6ff4b1a49875d8eb2c7a1201cd1f4964）
 
@@ -70,7 +71,7 @@ https://etherscan.io/tx/0x8c82ba8010687de3ee501195a33795868fec2995eedbc082171fb7
 
 （0x8183db87e201923efa3b36bce72745f406e729dc994a46a79bcc811a30fb44df）
 
-![image.png](attachment:a04de649-b437-4cd4-9075-0396e15e27fe:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/transer%20to%20tomado2.png?raw=true)
 
 总共只有1500ETH经过了混币器的处理（还有部分作为手续费留存）
 
@@ -92,7 +93,7 @@ Tornado 本身长期处在制裁与高监控之下，直接大额走混币器很
 
 那么我们不妨搜索一下他攻击的是什么？[0xE0E907e3743715294c2A5f52618d278CBc006CEd](https://x.com/search?q=0xE0E907e3743715294c2A5f52618d278CBc006CEd&src=typeahead_click)
 
-![image.png](attachment:c6ac892e-10ba-4308-8b92-25e468984d5a:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/miningrig%20twitter%20infomation.png?raw=true)
 
 我们可以看到不少对该被攻击合约的分析。于是我们能够得到该结论了“该账户最初是为了攻击 MiningRig 合约而创建的。”
 
@@ -106,7 +107,7 @@ https://etherscan.io/txs?a=0xc0ffeebabe5d496b2dde509f9fa189c25cf29671&p=1196 首
 
 https://etherscan.io/tx/0xa3cd2c9c3be457f5c4b08e377279cd29b30e108d417d09d9380411200a7586ed 还真是发现在Jul-28-2023 01:37:47 PM UTC就开始动手了，说明确实这个漏洞被人提前利用了。
 
-![CRVETH Exploiter att MiningRig.png](attachment:dd90bbfc-72a5-4efe-97b8-b06f7ed36d9b:CRVETH_Exploiter_att_MiningRig.png)
+![CRVETH Exploiter att MiningRig.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/Exploiter%E8%B0%83%E7%94%A8%E5%90%88%E7%BA%A6%E4%B8%8Eminingrig%E4%BA%A4%E4%BA%92%E7%9A%84%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B.png?raw=true)
 
 这个是CRV/ETH Exploiter调用合约与miningrig交互的详细过程。
 
@@ -116,7 +117,7 @@ https://etherscan.io/tx/0xa3cd2c9c3be457f5c4b08e377279cd29b30e108d417d09d9380411
 
 然后29日，黑客正式动手，但是实际上已经被人撸的差不多了，这个是对该时间的报告 https://x.com/0xjustadev/status/1685277465483026432。
 
-![CRVETH Exploiter att MiningRig2.png](attachment:717ba324-af49-48d6-89d8-57a186932d89:CRVETH_Exploiter_att_MiningRig2.png)
+![CRVETH Exploiter att MiningRig2.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/%E8%BF%99%E6%98%AF%E5%AE%8C%E6%88%90%E4%B8%80%E6%AC%A1%E8%B0%83%E5%8F%96miningrig%E8%8E%B7%E5%88%A9%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B.png?raw=true)
 
 这是完成一次调取miningrig获利的完整流程，黑客进行了多次，最后获利32.291419732496523585 ETH。 https://etherscan.io/address/0xa757328ff7ab8c36e7286c559d8ab03578036b95#tokentxns
 
@@ -128,7 +129,7 @@ https://docs.google.com/spreadsheets/d/1gUi7Nxs6V4wHKUMfSq85d2ShFW3fsMfggKIEV846
 
 而不必采用新伪造kyc获取新的资金来进行攻击。
 
-![hyver.png](attachment:69d29bf6-5eb0-4b31-870e-415fc9d7b1de:hyver.png)
+![hyver.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/hyver.png?raw=true)
 
 下面根据上面的根据上面所示资金流图（标号 [1]–[12]）说明利用“Vyper 重入锁失效”盗取资金的流程。
 
@@ -216,7 +217,7 @@ function 0x9b9() private {
 
 经过询问gpt，发现这种加密混淆的手段并不是攻击者常用的，所以可以作为攻击者的一大特征。
 
-![image.png](attachment:9e02d02d-a9d5-4fc9-84ff-a8edfe935a49:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Rabbithole/pic/chatgpt%20for%20keccak.png?raw=true)
 
 基于上面所述内容，总结攻击者的特征如下
 
