@@ -257,7 +257,7 @@ $p_i$、数量$q_i$（以基础资产计），方向$\text{side}_i \in \{+1,-1\}
 
 第三种方法（来自于chatgpt提出的）库存记账法：https://arxiv.org/abs/2208.06046?utm_source=chatgpt.com
 
-![image.png](attachment:4d918bdc-7c92-4fc4-9f2b-f80ef6baf365:image.png)
+![image.png](https://github.com/0xTyche/Wintermute-Alpha-Challenge-2025-Solution/blob/main/Shedding%20Light/pic/method3.png?raw=true)
 
 （2）题目中所提及的复杂的参与者或者是说有复杂需求的交易者，应该如何应用或者参与dark amm，
 
